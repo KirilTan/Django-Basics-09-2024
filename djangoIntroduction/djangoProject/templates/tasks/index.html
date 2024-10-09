@@ -6,7 +6,18 @@
 </head>
 <body>
     <h1>Hello, this is the main page!</h1> 
+    
+    {% if tasks %}
+        <p>You have {{ tasks | length }} tasks</p>
+    {% endif %}
 
+    <form method="get" action="/">
+        <label>
+            <input type="text" name="title_filter" value="{{ title_filter }}" placeholder="Search">
+        </label>
+        <button type="submit"> Search </button>
+    </form>
+    
     <ul>
         {% for task in tasks %}
         <li> {{ task.name }} - {{ task.description }} - {{ task.created_at }}</li>

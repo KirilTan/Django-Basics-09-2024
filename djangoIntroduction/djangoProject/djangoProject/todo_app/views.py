@@ -6,9 +6,13 @@ from djangoProject.todo_app.models import Task
 
 # Create your views here.
 def main_page(request):
-    tasks = Task.objects.all()
+    title_filter = request.GET.get('title_filter', '')
+
+    tasks = Task.objects.filter(name__icontains=title_filter)
+
     context = {
-        'tasks': [],
+        'title_filter': title_filter,
+        'tasks': tasks,
     }
 
     return render(request, 'tasks/index.html', context)
