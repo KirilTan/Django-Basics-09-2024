@@ -30,7 +30,7 @@ ALLOWED_HOSTS = []
 
 # Application definition
 MY_APPS = [
-    "djangoProject.todo_list",
+    "djangoProject.todo_app",
 ]
 
 INSTALLED_APPS = [
@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'djangoProject.todo_list.apps.TodoListConfig'
+                     'djangoProject.todo_app.apps.TodoListConfig'
 ] + MY_APPS
 
 MIDDLEWARE = [
