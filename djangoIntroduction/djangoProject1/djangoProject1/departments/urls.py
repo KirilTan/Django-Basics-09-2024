@@ -1,7 +1,9 @@
 from django.urls import path
-from djangoProject1.departments.views import index
-
+from djangoProject1.departments import views
 
 urlpatterns = [
-    path('', index)
+    path('', views.index),
+    path('<int:pk>/', views.view_with_int_pk),
+    path('<str:name>/', views.view_with_name),
+    path('<param>/', views.view_with_args_and_kwargs),
 ]
