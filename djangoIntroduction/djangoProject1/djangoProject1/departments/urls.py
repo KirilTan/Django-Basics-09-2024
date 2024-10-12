@@ -1,9 +1,11 @@
-from django.urls import path
+from django.urls import path, include
 from djangoProject1.departments import views
 
 urlpatterns = [
     path('', views.index),
-    path('<int:pk>/<slug:slug>/', views.view_with_pk_and_slug),
+    path('id/', include([
+        path('<int:pk>/<slug:slug>/', views.view_with_pk_and_slug),
+    ])),
     path('<slug:slug>/', views.view_with_slug),
     path('<int:pk>/', views.view_with_int_pk),
     path('<str:name>/', views.view_with_name),
