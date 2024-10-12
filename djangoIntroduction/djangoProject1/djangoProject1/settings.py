@@ -29,6 +29,9 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
+MY_APPS = [
+    'djangoProject1.departments.apps.DepartmentsConfig'
+]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -37,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-]
+] + MY_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
