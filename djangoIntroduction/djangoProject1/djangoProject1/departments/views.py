@@ -9,7 +9,7 @@ def index(request):
     return HttpResponse('<h1>Hello, World!</h1>')
 
 def view_with_name(request, name):
-    return HttpResponse(f'<h1>Hello, Mr. {name}!</h1>')
+    return render(request,'departments/name_template.html', {'name': name})
 
 def view_with_args_and_kwargs(request, *args, **kwargs):
     return HttpResponse(f'<h1> Args: {args}, kwargs: {kwargs}</h1>')
