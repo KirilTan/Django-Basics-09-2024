@@ -32,3 +32,6 @@ def view_with_pk_and_slug(request, pk, slug):
 
 def redirect_to_softuni(request):
     return redirect('https://softuni.bg/')
+
+def redirect_to_home(request):
+    return redirect('home')
