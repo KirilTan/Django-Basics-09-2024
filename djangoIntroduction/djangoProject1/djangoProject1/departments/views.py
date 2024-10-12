@@ -1,5 +1,5 @@
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404, redirect
 
 from djangoProject1.departments.models import Department
 
@@ -23,9 +23,12 @@ def view_with_slug(request, slug):
     return HttpResponse(f'<h1> Department: {department} with slug: {department.slug}</h1>')
 
 def view_with_pk_and_slug(request, pk, slug):
-    department = Department.objects.get(pk=pk, slug=slug)
+    department = get_object_or_404(Department, pk=pk, slug=slug)
 
     return HttpResponse(f'<h1>'
                         f'Department: {department} <br> '
                         f'slug: {department.slug}'
                         f'</h1>')
+
+def redirect_to_softuni(request):
+    return redirect('https://softuni.bg/')
