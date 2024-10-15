@@ -16,8 +16,8 @@ class FileSizeValidator:
     def error_message(self, value):
         if value is None:
             self.__error_message = f"File size should not exceed {self.max_size_mb}MB."
-
-        self.__message = value
+        else:
+            self.__message = value
 
     def __call__(self, value):
         if value.size > (self.max_size_mb * 1024 * 1024):
