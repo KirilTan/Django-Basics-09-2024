@@ -1,4 +1,4 @@
-# Django Basics - September 2024
+# Django-Basics-09-2024
 
 Welcome to my repository! \
 This repository contains all my work and assignments completed during the Django Basics course.
