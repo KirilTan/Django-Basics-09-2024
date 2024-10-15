@@ -4,6 +4,7 @@
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/djangoIntroduction/djangoProject/.venv" />
       <excludeFolder url="file://$MODULE_DIR$/templateBasics/djangoProject/.venv" />
+      <excludeFolder url="file://$MODULE_DIR$/workshop/petstagram/.venv" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
